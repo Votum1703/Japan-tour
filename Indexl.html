@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo" onclick="slowScroll('#top')">
+        <span>Sayonara</span>
+        <h4>Путешествие в Японию</h4>
+      </div>
+      <div id="about">
+        <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+        <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+        <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+        <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+      </div>
+    </header>
+    <div id="top">
+      <h1>У самурая нет цели</h1>
+      <h3>Только Путь</h3>
+    </div>
+    <div id="main">
+      <div class="intro">
+        <h2>Открой Японию с нами</h2>
+        <span>Большой выбор различных туров под вкус каждого</span>
+      </div>
+      <div class="text">
+        <span
+          >Япония совмещает в себе две крайности – традиции и современность. Это настоящая страна
+          контрастов где древние пагоды и ворота духов соседствуют с зеркальными небоскребами,
+          новомодные пятизвездочные отели с традиционными реканами, а СПА-центры с национальными
+          банями офуро. Туристов Япония встретит великим разнообразием развлечений, а также
+          природных и архитектурных памятников: от замков Осаки, до величественных склонов Фудзиямы.
+          Столица, Токио, – гигантский мегаполис с футуристическими постройками, головокружительными
+          небоскребами, традиционными садами, парками и императорским дворцом.</span
+        >
+      </div>
+    </div>
+    <div id="overview">
+      <h2>Популярные туры</h2>
+      <h5>C нами всё проще</h5>
+
+      <div class="img">
+        <img
+          src="https://s9.travelask.ru/system/images/files/001/238/390/wysiwyg_jpg/%D1%82%D0%BE%D0%BA%D0%B8%D0%BE.jpg?1544107478"
+          alt="" />
+        <span>Токио</span>
+      </div>
+      <div class="img">
+        <img src="https://smapse.ru/image/full/name/yaponia-smapse3.jpg/" alt="" />
+        <span>Киото</span>
+      </div>
+      <div class="img">
+        <img
+          src="https://s9.travelask.ru/system/images/files/001/238/387/wysiwyg_jpg/%D0%BD%D0%B0%D1%80%D0%B0.jpg?1544107427"
+          alt="" />
+        <span>Нара</span>
+      </div>
+      <div class="img">
+        <img
+          src="https://s9.travelask.ru/system/images/files/001/238/385/wysiwyg_jpg/%D0%BE%D1%81%D0%B0%D0%BA%D0%B0.jpg?1544107392"
+          alt="" />
+        <span>Осака</span>
+      </div>
+    </div>
+
+    <div id="contacts">
+      <center>
+        <h6>Обратная связь</h6>
+      </center>
+      <form id="form_input">
+        <label for="name">Имя <span>*</span></label
+        ><br />
+        <input type="text" placeholder="Введите Имя" name="name" id="name" /><br />
+        <label for="email">Ваша почта <span>*</span></label
+        ><br />
+        <input type="email" placeholder="Введите email" name="email" id="email" /><br />
+        <label for="message">Комментарий <span>*</span></label
+        ><br />
+        <textarea placeholder="Введите ваш комментарий" name="message" id="message"></textarea
+        ><br />
+        <div id="mess_send" class="btn">Отправить</div>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      function slowScroll(id) {
+        $('html, body').animate(
+          {
+            scrollTop: $(id).offset().top,
+          },
+          500,
+        );
+      }
+      $(document).on('scroll', function () {
+        if ($(window).scrollTop() === 0) $('header').removeClass('fixed');
+        else $('header').attr('class', 'fixed');
+      });
+    </script>
+  </body>
+</html>
