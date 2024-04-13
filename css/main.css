@@ -201,10 +201,10 @@ header.fixed #logo {
 
 #overview {
   float: left;
-  background-image: url(https://img3.akspic.ru/crops/3/3/1/7/87133/87133-rozovyj-gora-vecher-orientir-tsvetok-3840x2160.jpg);
+  background-image: url(/css/img/wallpaperflare.com_wallpaper.jpg);
 
   background-blend-mode: multiply;
-  background-color: #ec8ca0;
+  background-color: #fdb7c5;
   background-size: cover;
   background-attachment: fixed;
 
